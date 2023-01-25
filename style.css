@@ -1,0 +1,188 @@
+h1{
+    color: red;
+    text-align: center;
+    text-shadow: 4px 4px 2px rgb(71, 10, 10);
+}
+
+.title {
+    color: rgb(20, 97, 26) ;
+}
+
+#italic{
+    color: orange;
+}
+
+nav {
+    background-color: rgb(0, 0, 255);
+    text-align: center;
+}
+
+.nav-wrapper{
+    background-color: blue;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    padding: 30px;
+    
+}
+
+.container {    
+    border: 10px dashed rgb(10, 204, 46);
+    margin: 50px 5px 25px 0px;
+    padding: 30px 0px 10px 35px; 
+}
+
+.Box {
+    /*display: inline-block; this will give a box layout but not responsive*/
+    height: 200px;
+    width: 200px;
+    background: rgb(0, 0, 255);
+    margin: 10px;   
+}
+ 
+/*Box animation items Starts here*/
+
+    /*animation-name: getBigger;
+    animation-duration: 6s;
+    animation-iteration-count: 8s;
+    animation-timing-function: ease-in;*/
+    /*code above refactor to code below*//*animation: getBigger infinite 8s linear;*/
+    /* this will make the box6 move , other choice( fixed and absolute) */
+
+/* Box 1 animation */
+@keyframes fadeMe {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+#Box1 {
+    animation-name: fadeMe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+/* Box 2 animation */
+@keyframes rotation{
+    0% {transform: rotate(90deg);}
+    50% {transform: rotate(180deg);}
+    100% {transform: rotate(360deg);}
+}
+
+#Box2 {
+    animation-name: rotation;
+    animation-duration: 2s;
+    animation-iteration-count: 10s;
+    animation-timing-function: ease-in-out;
+    border-radius: 10%;
+    background-image: radial-gradient(circle, rgb(255, 0, 221), rgb(255, 255, 0), rgb(0, 0, 255));
+}
+
+
+/* Box 3 animation */
+@keyframes getBigger{
+    0% {transform: scale(1);}
+    50% {transform: scale(2);}
+    0% {transform: scale(.5);}
+}
+
+#Box3 {
+    animation: getBigger infinite 8s linear;
+    border-radius: 50%;
+    background: rgb(255, 102, 0);
+}
+
+    
+/* Box 4 animation */
+@keyframes changeColors{
+    0% {background-color: rgb(128, 128, 128);}
+    25% {background-color: rgb(105, 6, 105);}
+    50% {background-color: rgb(255, 255, 0);}
+    75% {background-color: rgb(255, 192, 203);}
+    100% {background-color: grey;}
+} 
+
+#Box4 {
+   
+    animation: changeColors 7s 2s forwards;     
+}
+
+
+/* Box 5 animation */
+@keyframes moveBox{
+    0% {left: 0px; top:0px;}
+    25% {left: 100px; top:0px;}
+    50% {left: 100px; top:200px;}
+    75% {left: 0px; top:200px;}
+    100% {left: 0px; top:0px;}
+} 
+
+#Box5 {
+    position: relative;
+    background: red;
+    animation: moveBox 5s 3s;     
+}
+
+
+
+/* box 6 animation */
+#Box6 {
+    top: 10px;
+    left: 20px;
+    position: relative;  
+}
+
+
+html {
+    background-image: linear-gradient(to right, rgb(245, 245, 237);
+    background-size: cover;
+}
+
+
+
+
+/* box animation items Ends here*/
+
+
+.circle-img {
+    border-radius: 50%;
+}
+
+/*
+img {
+    box-shadow: 8px 8px 10px 8px rgb(128, 128, 128) ;
+}
+*/
+
+/*display: flex; - do this first with flex-wrap: wrap*/
+/*flex-wrap: wrap; - "display: inline-block; will be conflict to .flex"  flex-wrap: wrap  this will wrap the content inside, without flex-wrap: wrap content will display inline block*/
+
+.flex-container {
+    margin:30px;
+    border: 3px solid rgb(0, 0, 0);
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; /* center, flex-start, flex-end, space-between (navbar), space-around */    
+}    
+
+
+.row {
+    margin: 30px;
+}
+
+.input-field {
+    margin: 30px;
+}
+
+
